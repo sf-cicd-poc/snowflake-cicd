@@ -23,6 +23,10 @@ resource "snowflake_database" "demo_db" {
   comment = "Database for Snowflake Terraform demo"
 }
 
+data "snowflake_tables" "demo_table_2" {
+  database = "demo_db"
+  schema   = "public"
+}
 
 
 
